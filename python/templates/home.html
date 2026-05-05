@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BarterX Marketplace</title>
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#667eea,#764ba2);
+            font-family:sans-serif;
+            color:white;
+            text-align:center;
+        }
+
+        .box{
+            background: rgba(255,255,255,0.1);
+            padding:40px;
+            border-radius:20px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+        button{
+            padding:12px 20px;
+            margin:10px;
+            border:none;
+            border-radius:10px;
+            background:white;
+            color:#764ba2;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>🚀 BarterX Marketplace</h1>
+    <p>Exchange items without money 💱</p>
+    <p id="successMsg" style="color:yellow;"></p>
+
+<script>
+let msg = localStorage.getItem("success");
+if(msg){
+    document.getElementById("successMsg").innerText = msg;
+    localStorage.removeItem("success");
+}
+</script>
+
+    <button onclick="location.href='/login.html'">Login</button>
+    <button onclick="location.href='/register.html'">Register</button>
+</div>
+
+</body>
+</html>

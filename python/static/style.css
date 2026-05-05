@@ -1,0 +1,79 @@
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background: linear-gradient(-45deg,#667eea,#764ba2,#ff9a9e,#6dd5fa);
+    background-size:400% 400%;
+    animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+}
+
+input,button{
+    width:100%;
+    padding:10px;
+    margin:5px 0;
+}
+
+button{
+    background:#667eea;
+    color:white;
+    border:none;
+}
+button:hover {
+    background: #5a67d8;
+}
+
+button.delete {
+    background: red;
+}
+
+.card{
+    border:1px solid #ddd;
+    padding:10px;
+    margin:10px 0;
+}
+/* Card ke buttons ko ek line mein laane ke liye */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.cart-btn { 
+    background-color: #ff9f00; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    flex: 1; 
+    font-weight: bold;
+}
+
+.buy-btn { 
+    background-color: #fb641b; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    flex: 1; 
+    font-weight: bold;
+}
+
+.cart-btn:hover, .buy-btn:hover { 
+    filter: brightness(0.9); 
+}
